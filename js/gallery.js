@@ -73,3 +73,17 @@ const markup = images
   )
   .join("");
 gallery.insertAdjacentHTML("beforeend", markup);
+
+function currentImageSelect(event) {
+  event.preventDefault();
+  if (event.target.nodeName !== "IMG") {
+    return;
+  }
+  basicLightbox
+    .create(
+      `<img width="1112" height="640" src="${event.target.dataset.source}">`
+    )
+    .show();
+}
+
+gallery.addEventListener("click", currentImageSelect);

@@ -19,7 +19,8 @@ img {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  column-gap: 18px;
+  row-gap: 160px;
 }
 
 .gallery-item {
